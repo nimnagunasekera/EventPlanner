@@ -33,6 +33,12 @@ Route::get('event/{id}', function ($id) {
 // ->where('id', '[0-9]+')
 ->name('event.show');
 
+Route::get('reserve/{id}', function ($id) {
+    return view('event.reservation', [
+        'reserve' => $id
+    ]);
+})->name('event.reservation');
+
 //As a rule, keep the home route at the bottom of the file.
 Route::get('/', function () {
     return view('home');
