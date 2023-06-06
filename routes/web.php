@@ -13,9 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+//As a convention, always keep all the authentication routes at the top of the file.
 
 Route::middleware([
     'auth:sanctum',
@@ -26,3 +24,17 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+Route::get('event/{id}', function ($id) {
+    return view('event.show', [
+        'event' => $id
+    ]);
+})
+// ->where('id', '[0-9]+')
+->name('event.show');
+
+//As a rule, keep the home route at the bottom of the file.
+Route::get('/', function () {
+    return view('home');
+})
+->name('home');
