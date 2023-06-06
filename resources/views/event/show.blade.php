@@ -4,7 +4,7 @@
     <div class="py-6">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 relative">
             <!-- component -->
-            <div class="mx-auto max-w-7xl border border-grey shadow">
+            <div class="mx-auto max-w-7xl border border-grey rounded-lg shadow ">
                 <div class="relative z-10 lg:w-full lg:max">
                     <section class="bg-cover bg-center py-32 w-full h-f" style="background-image: url(https://images.unsplash.com/photo-1548266652-99cf27701ced?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=735&q=80);">
                         <div class="mx-auto max-w-3xl text-center">

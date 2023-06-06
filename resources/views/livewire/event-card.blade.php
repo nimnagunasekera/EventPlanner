@@ -35,7 +35,7 @@
             </div>
         </div>
         <div class="flex justify-center">
-            <a href="{{ route('event.show', 1) }}" class="inline-flex items-center px-6 py-2 mt-4 text-sm font-bold text-center text-white bg-orange-500 rounded-lg hover:bg-orange-400 focus:ring-4 focus:outline-none focus:ring-blue-300">
+            <a href="{{ route('event.show', 1) }}" class="inline-flex items-center px-6 py-2 mt-4 text-sm font-bold text-center text-white bg-blue-600 rounded-lg hover:bg-blue-500 focus:ring-4 focus:outline-none focus:ring-blue-300">
                 View Event
             </a>
         </div>
