@@ -104,8 +104,8 @@
                     <div class="p-4">
                         <h2 class="text-2xl">Reviews</h2>
                         <p class="text-sm text-gray-500">Event reviews</p>
-                        <div class="mt-6 space-y-10 divide-y divide-gray-200 border-b border-t border-gray-200 pb-10">
-                            <div class="pt-10 lg:grid lg:grid-cols-12 lg:gap-x-8">
+                        <div class="mt-6 space-y-10 divide-y divide-gray-200 border-b border-t border-gray-200 pb-10 hover:bg-gray-50">
+                            <div class="pt-10 lg:grid lg:grid-cols-12 lg:gap-x-8 ">
                                 <div
                                     class="lg:col-span-8 lg:col-start-5 xl:col-span-9 xl:col-start-4 xl:grid xl:grid-cols-3 xl:items-start xl:gap-x-8">
                                     <div class="flex items-center xl:col-span-1">
@@ -179,20 +179,14 @@
                                         class="block w-full border-0 pt-2.5 text-lg font-medium placeholder:text-gray-400 focus:ring-0"
                                         placeholder="Title">
                                     <label for="description" class="sr-only">Description</label>
-                                    <textarea rows="2" name="description" id="description"
+                                    <textarea rows="6" name="description" id="description"
                                         class="block w-full resize-none border-0 py-0 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
                                         placeholder="Write a description..."></textarea>
 
                                     <!-- Spacer element to match the height of the toolbar -->
                                     <div aria-hidden="true">
-                                        <div class="py-2">
+                                        <div class="py">
                                             <div class="h-9"></div>
-                                        </div>
-                                        <div class="h-px"></div>
-                                        <div class="py-2">
-                                            <div class="py-px">
-                                                <div class="h-9"></div>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -202,7 +196,7 @@
                                 <div class="flex  space-x-3 border-t border-gray-200 py-2">
                                     <div class="flex-shrink-0">
                                         <button type="submit"
-                                            class="inline-flex items-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Create</button>
+                                            class="inline-flex items-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Post Your Review</button>
                                     </div>
                                 </div>
 
