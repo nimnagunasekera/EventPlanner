@@ -27,7 +27,7 @@
                     </div>
 
                     <div class="px-4 border-b">
-                        <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 py-4 border-b">
+                        <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 pb-4 border-b">
                             <p>
                                 Event Name
                             </p>
@@ -59,12 +59,21 @@
                                 2 hours
                             </p>
                         </div>
+                        <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 py-4 border-b">
+                            <p >
+                                Category
+                            </p>
+                            <p class="text-gray-600">
+                                Category type
+                            </p>
+                        </div>
+
                         <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 py-4 ">
                             <p>
                                 About
                             </p>
                             <p class="text-gray-600">
-                                Fugiat ipsum ipsum deserunt culpa aute sint do nostrud anim incididunt cillum culpa consequat. Excepteur qui ipsum aliquip consequat sint. Sit id mollit nulla mollit nostrud in ea officia proident. Irure nostrud pariatur mollit ad adipisicing reprehenderit deserunt qui eu.
+                                Fugiat ipsum ipsum deserunt culpa aute sint do nostrud anim incididunt cillum culpa consequat. Excepteur qui ipsum aliquip consequat sint.
                             </p>
                         </div>
                     </div>
@@ -78,7 +87,7 @@
                     </div>
 
                     <div class="px-4 border-b">
-                        <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 py-4 border-b">
+                        <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 pb-4 border-b">
                             <p>
                                 Venue Name
                             </p>
@@ -102,23 +111,32 @@
                                 Colombo 02
                             </p>
                         </div>
-                        <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 py-4 ">
+                        {{-- <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 py-4 ">
                             <p>
                                 Additional Details
                             </p>
                             <p class="text-gray-600">
                                 Fugiat ipsum ipsum deserunt culpa aute sint do nostrud anim incididunt cillum culpa consequat. Excepteur qui ipsum aliquip consequat sint. Sit id mollit nulla mollit nostrud in ea officia proident. Irure nostrud pariatur mollit ad adipisicing reprehenderit deserunt qui eu.
                             </p>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
 
                 <div >
-
-
-                    <div class="px-4 border-b">
+                    <div class="px-4">
+                            <h2 class="pt-4 text-2xl">
+                                Registration and Pricing
+                            </h2>
+                            <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 py-4 border-b">
+                                <p >
+                                    Price Per Ticket
+                                </p>
+                                <p class="text-gray-600">
+                                    Rs. 5000.00
+                                </p>
+                            </div>
                         <div class="grid py-4 relative">
-                            <a href="{{ route('event.reservation', 1) }}" class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 place-self-center">
+                            <a href="{{ route('event.reservation', 1) }}" class="rounded-md bg-indigo-600 px-3 py-2 text-lg font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 place-self-center">
                                 Register For Event
                             </a>
                         </div>

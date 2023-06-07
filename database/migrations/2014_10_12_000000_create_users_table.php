@@ -24,7 +24,6 @@ return new class extends Migration
             //profile
             $table->string('first_name')->nullable();
             $table->string('last_name')->nullable();
-            $table->string('email')->unique()->nullable();
             $table->string('phone', 12)->unique()->nullable();
             $table->text('address')->nullable();
 
