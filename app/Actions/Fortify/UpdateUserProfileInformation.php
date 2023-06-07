@@ -21,6 +21,14 @@ class UpdateUserProfileInformation implements UpdatesUserProfileInformation
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'email', 'max:255', Rule::unique('users')->ignore($user->id)],
             'photo' => ['nullable', 'mimes:jpg,jpeg,png', 'max:1024'],
+            'phone' => ['required', 'string', 'max:12', Rule::unique('users')->ignore($user->id)],
+            'first_name' => ['required', 'string', 'max:255'],
+            'last_name' => ['required', 'string', 'max:255'],
+            'address' => ['nullable', 'string'],
+            'city' => ['nullable', 'string', 'max:255'],
+            'province' => ['nullable', 'string', 'max:255'],
+            'postal_code' => ['nullable', 'string', 'max:255'],
+
         ])->validateWithBag('updateProfileInformation');
 
         if (isset($input['photo'])) {
@@ -34,6 +42,13 @@ class UpdateUserProfileInformation implements UpdatesUserProfileInformation
             $user->forceFill([
                 'name' => $input['name'],
                 'email' => $input['email'],
+                'phone' => $input['phone'],
+                'first_name' => $input['first_name'],
+                'last_name' => $input['last_name'],
+                'address' => $input['address'],
+                'city' => $input['city'],
+                'province' => $input['province'],
+                'postal_code' => $input['postal_code'],
             ])->save();
         }
     }
@@ -48,6 +63,13 @@ class UpdateUserProfileInformation implements UpdatesUserProfileInformation
         $user->forceFill([
             'name' => $input['name'],
             'email' => $input['email'],
+            'phone' => $input['phone'],
+            'first_name' => $input['first_name'],
+            'last_name' => $input['last_name'],
+            'address' => $input['address'],
+            'city' => $input['city'],
+            'province' => $input['province'],
+            'postal_code' => $input['postal_code'],
             'email_verified_at' => null,
         ])->save();
 

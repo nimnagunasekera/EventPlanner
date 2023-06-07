@@ -25,9 +25,12 @@ return new class extends Migration
             $table->string('first_name')->nullable();
             $table->string('last_name')->nullable();
             $table->string('phone', 12)->unique()->nullable();
-            $table->text('address')->nullable();
 
-            //payment
+            $table->text('address')->nullable();
+            $table->string('city')->nullable();
+            $table->string('province')->nullable();
+            $table->string('postal_code')->nullable();
+
             $table->string('card_number',20)->nullable();
 
             $table->timestamp('email_verified_at')->nullable();

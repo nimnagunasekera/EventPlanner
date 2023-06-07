@@ -52,15 +52,33 @@
             </div>
         @endif
 
+        <!-- First Name -->
+        <div class="col-span-3">
+            <x-label for="first_name" value="{{ __('First Name') }}" />
+            <x-input id="first_name" type="text" class="mt-1 block w-full" wire:model.defer="state.first_name" autocomplete="first_name" />
+            <x-input-error for="first_name" class="mt-2" />
+        </div>
+
+        <!-- Last Name -->
+        <div class="col-span-3">
+            <x-label for="last_name" value="{{ __('Last Name') }}" />
+            <x-input id="last_name" type="text" class="mt-1 block w-full" wire:model.defer="state.last_name" autocomplete="last_name" />
+            <x-input-error for="last_name" class="mt-2" />
+        </div>
+
         <!-- Name -->
-        <div class="col-span-6 sm:col-span-4">
-            <x-label for="name" value="{{ __('Name') }}" />
+        <div class="col-span-6 sm:col-span-3">
+            <x-label for="name" value="{{ __('User Name') }}" />
             <x-input id="name" type="text" class="mt-1 block w-full" wire:model.defer="state.name" autocomplete="name" />
             <x-input-error for="name" class="mt-2" />
         </div>
 
+        <div class="py-2 col-span-6">
+            <hr>
+        </div>
+
         <!-- Email -->
-        <div class="col-span-6 sm:col-span-4">
+        <div class="col-span-3">
             <x-label for="email" value="{{ __('Email') }}" />
             <x-input id="email" type="email" class="mt-1 block w-full" wire:model.defer="state.email" autocomplete="username" />
             <x-input-error for="email" class="mt-2" />
@@ -81,6 +99,53 @@
                 @endif
             @endif
         </div>
+
+         <!-- Phone -->
+         <div class="col-span-3">
+            <x-label for="phone" value="{{ __('Phone') }}" />
+            <x-input id="phone" x-mask="999 999 9999" placeholder="071 123 4567" type="text"
+                class="mt-1 block w-full" wire:model.defer="state.phone" autocomplete="phone" />
+            <x-input-error for="phone" class="mt-2" />
+        </div>
+
+
+        <div class="py-2 col-span-6">
+            <hr>
+        </div>
+
+        <!-- Address -->
+        <div class="col-span-6 sm:col-span-6">
+            <x-label for="address" value="{{ __('Address') }}" />
+            <x-textarea id="address" class="mt-1 block w-full" wire:model.defer="state.address"
+                autocomplete="address" />
+            <x-input-error for="address" class="mt-2" />
+        </div>
+
+        <!-- City -->
+        <div class="col-span-6 sm:col-span-2">
+            <x-label for="city" value="{{ __('City') }}" />
+            <x-input id="city" type="text" class="mt-1 block w-full" wire:model.defer="state.city"
+                autocomplete="city" />
+            <x-input-error for="city" class="mt-2" />
+        </div>
+
+        <!-- Province -->
+        <div class="col-span-6 sm:col-span-2">
+            <x-label for="province" value="{{ __('Province') }}" />
+            <x-input-province id="province" type="text" class="mt-1 block w-full" wire:model.defer="state.province"
+                wire:model.defer="state.province"
+                autocomplete="province" />
+            <x-input-error for="province" class="mt-2" />
+        </div>
+
+        <!-- Postal Code -->
+        <div class="col-span-6 sm:col-span-2">
+            <x-label for="postal_code" value="{{ __('Postal Code') }}" />
+            <x-input id="postal_code" type="text" class="mt-1 block w-full" wire:model.defer="state.postal_code"
+                autocomplete="postal_code" />
+            <x-input-error for="postal_code" class="mt-2" />
+        </div>
+
     </x-slot>
 
     <x-slot name="actions">
