@@ -43,6 +43,9 @@ class EventReservationForm extends Component
 
         $this->emit('reservationCreated');
 
+        //show success message
+        session()->flash('message', 'Registered to the event successfully!');
+
         //redirect user to the event page
         return redirect()->route('event.show', $this->event->id);
     }

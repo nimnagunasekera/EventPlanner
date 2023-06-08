@@ -15,6 +15,7 @@ class EventForm extends Component
 
     public $image;
 
+
     // validation rules
     protected $rules = [
         'event.category_id' => 'required',

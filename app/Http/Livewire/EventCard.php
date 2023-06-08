@@ -8,6 +8,8 @@ class EventCard extends Component
 {
     public $event;
 
+    public $defaultImage = 'https://source.unsplash.com/collection/22465791/1600x900';
+
     public function mount($event)
     {
         $this->event = $event;

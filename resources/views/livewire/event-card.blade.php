@@ -10,7 +10,7 @@
         @if ($event->hasMedia('image'))
                 <img class="rounded-t-lg object-cover w-full h-full" src="{{ $event->getFirstMediaUrl('image', 'thumb') }}" alt="">
             @else
-            <img class="rounded-t-lg object-cover w-full h-full" src="https://images.unsplash.com/photo-1549451371-64aa98a6f660?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="" />
+            <img class="rounded-t-lg object-cover w-full h-full" src="{{ $defaultImage }}" alt="" />
         @endif
     </div>
     <div class="p-5">
