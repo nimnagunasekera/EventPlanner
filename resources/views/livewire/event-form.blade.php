@@ -64,7 +64,7 @@
             </div>
 
             <div class="col-span-6">
-                <x-label for="about" value="{{ __('About') }}" />
+                <x-label for="about" value="{{ __('Description') }}" />
                 <x-textarea id="about" type="text" class="mt-1 block w-full" wire:model="event.about" />
                 <x-input-error for="about" class="mt-2" />
             </div>

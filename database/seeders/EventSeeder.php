@@ -22,7 +22,7 @@ class EventSeeder extends Seeder
                 'venue_name' => 'Galle Face Green',
                 'address' => 'Galle Road',
                 'city' => 'Colombo',
-                'price' => 'Rs. 2000',
+                'price' => '2000',
             ),
             array(
                 'event_name' => 'Art Exhibition',
@@ -33,7 +33,7 @@ class EventSeeder extends Seeder
                 'venue_name' => 'JDA Perera Gallery',
                 'address' => 'Horton Place',
                 'city' => 'Colombo',
-                'price' => 'Free',
+                'price' => '1000',
             ),
             array(
                 'event_name' => 'Fitness Workshop',
@@ -44,7 +44,7 @@ class EventSeeder extends Seeder
                 'venue_name' => 'Power Gym',
                 'address' => 'Duplication Road',
                 'city' => 'Colombo',
-                'price' => 'Rs. 1500',
+                'price' => '1500',
             ),
             array(
                 'event_name' => 'Food Festival',
@@ -55,7 +55,7 @@ class EventSeeder extends Seeder
                 'venue_name' => 'Independence Square',
                 'address' => 'Independence Avenue',
                 'city' => 'Colombo',
-                'price' => 'Rs. 1000',
+                'price' => '1000',
             ),
             array(
                 'event_name' => 'Tech Conference',
@@ -66,7 +66,7 @@ class EventSeeder extends Seeder
                 'venue_name' => 'Nelum Pokuna Mahinda Rajapaksa Theatre',
                 'address' => 'Lotus Road',
                 'city' => 'Colombo',
-                'price' => 'Rs. 5000',
+                'price' => '5000',
             ),
             array(
                 'event_name' => 'Film Screening',
@@ -77,7 +77,7 @@ class EventSeeder extends Seeder
                 'venue_name' => 'Liberty Cinema',
                 'address' => 'Dharmapala Mawatha',
                 'city' => 'Colombo',
-                'price' => 'Rs. 500',
+                'price' => '500',
             ),
             array(
                 'event_name' => 'Cultural Dance Performance',
@@ -88,7 +88,7 @@ class EventSeeder extends Seeder
                 'venue_name' => 'Nelum Pokuna Mahinda Rajapaksa Theatre',
                 'address' => 'Lotus Road',
                 'city' => 'Colombo',
-                'price' => 'Rs. 2500',
+                'price' => '2500',
             ),
             array(
                 'event_name' => 'Fashion Show',
@@ -99,7 +99,7 @@ class EventSeeder extends Seeder
                 'venue_name' => 'Shangri-La Hotel',
                 'address' => 'Galle Face',
                 'city' => 'Colombo',
-                'price' => 'Rs. 3000',
+                'price' => '3000',
             ),
             array(
                 'event_name' => 'Charity Gala',
@@ -110,7 +110,7 @@ class EventSeeder extends Seeder
                 'venue_name' => 'Cinnamon Grand',
                 'address' => 'Galle Road',
                 'city' => 'Colombo',
-                'price' => 'Rs. 5000',
+                'price' => '5000',
             ),
             array(
                 'event_name' => 'Sports Tournament',
@@ -121,7 +121,7 @@ class EventSeeder extends Seeder
                 'venue_name' => 'Sinhalese Sports Club Ground',
                 'address' => 'Maitland Place',
                 'city' => 'Colombo',
-                'price' => 'Rs. 1000',
+                'price' => '1000',
             ),
             array(
                 'event_name' => 'Conference on Science',
@@ -132,7 +132,7 @@ class EventSeeder extends Seeder
                 'venue_name' => 'Bandaranaike Memorial International Conference Hall',
                 'address' => 'Bauddhaloka Mawatha',
                 'city' => 'Colombo',
-                'price' => 'Rs. 3000',
+                'price' => '3000',
             ),
             array(
                 'event_name' => 'Comedy Show',
@@ -143,7 +143,7 @@ class EventSeeder extends Seeder
                 'venue_name' => 'Nuga Tree Rooftop Bar',
                 'address' => 'Galle Road',
                 'city' => 'Colombo',
-                'price' => 'Rs. 1500',
+                'price' => '1500',
             ),
         );
 

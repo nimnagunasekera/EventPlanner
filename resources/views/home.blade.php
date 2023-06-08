@@ -17,6 +17,9 @@
                 </div>
 
             </div>
+            <div class="p-4">
+                {{ $events->links() }}
+            </div>
         </div>
     </div>
 </x-app-layout>

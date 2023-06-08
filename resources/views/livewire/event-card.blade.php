@@ -1,17 +1,20 @@
 <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow">
     <div class="h-48 overflow-hidden">
-        <a href="{{ route('event.show', $event->id) }}">
+        {{-- <a href="{{ route('event.show', $event->id) }}">
             @if ($event->hasMedia('image'))
                 <img class="rounded-t-lg object-cover w-full h-full" src="{{ $event->getFirstMediaUrl('image', 'thumb') }}" alt="">
             @else
             <img class="rounded-t-lg object-cover w-full h-full" src="https://images.unsplash.com/photo-1549451371-64aa98a6f660?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="" />
             @endif
-        </a>
+        </a> --}}
+        @if ($event->hasMedia('image'))
+                <img class="rounded-t-lg object-cover w-full h-full" src="{{ $event->getFirstMediaUrl('image', 'thumb') }}" alt="">
+            @else
+            <img class="rounded-t-lg object-cover w-full h-full" src="https://images.unsplash.com/photo-1549451371-64aa98a6f660?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="" />
+        @endif
     </div>
     <div class="p-5">
-        <a href="#">
             <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">{{ $event->event_name }}</h5>
-        </a>
         <div class="mt-4">
             <div class="flex items-center mb-2">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 mr-1 flex-shrink-0">
@@ -39,7 +42,7 @@
             </div>
         </div>
         <div class="flex justify-center">
-            <a href="{{ route('event.show', 1) }}" class="inline-flex items-center px-6 py-2 mt-4 text-sm font-bold text-center text-white bg-blue-600 rounded-lg hover:bg-blue-500 focus:ring-4 focus:outline-none focus:ring-blue-300">
+            <a href="{{ route('event.show', $event->id) }}" class="inline-flex items-center px-6 py-2 mt-4 text-sm font-bold text-center text-white bg-blue-600 rounded-lg hover:bg-blue-500 focus:ring-4 focus:outline-none focus:ring-blue-300">
                 View Event
             </a>
         </div>

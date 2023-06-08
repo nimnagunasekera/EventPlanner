@@ -6,15 +6,15 @@
             <!-- component -->
             <div class="mx-auto max-w-7xl border border-grey rounded-lg shadow ">
                 <div class="relative z-10 lg:w-full lg:max">
-                    <section class="bg-cover bg-center py-32 w-full h-f" style="background-image: url(https://images.unsplash.com/photo-1453888768187-1e6746aba265?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1174&q=80);">
+                    <section class="bg-cover bg-center py-32 w-full h-f" style="background-image: url('{{ $event->getFirstMediaUrl('image', 'thumb') }}'); background-size: 1200px 320px;">
                         <div class="mx-auto max-w-3xl text-center">
                             <div class="inline-block bg-black bg-opacity-20 rounded-lg">
-                                <h1 class="px-2 py-2 text-white text-5xl font-medium">Enchanted Garden Gala</h1>
+                                <h1 class="px-2 py-2 text-white text-5xl font-medium">{{ $event->event_name }}</h1>
                             </div>
                         </div>
-
                     </section>
                 </div>
+
 
 
                 <!-- This is an example component -->
@@ -32,7 +32,7 @@
                                 Event Name
                             </p>
                             <p class="text-gray-600">
-                                Jane Doe
+                                {{ $event->event_name }}
                             </p>
                         </div>
                         <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 py-4 border-b">
@@ -40,7 +40,7 @@
                                 Date
                             </p>
                             <p class="text-gray-600">
-                                    07-Jun-23
+                                    {{ $event->date }}
                             </p>
                         </div>
                         <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 py-4 border-b">
@@ -48,7 +48,7 @@
                                 Time
                             </p>
                             <p class="text-gray-600">
-                                10:00 PM
+                                {{ $event->time }}
                             </p>
                         </div>
                         <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 py-4 border-b">
@@ -56,7 +56,7 @@
                                 Duration
                             </p>
                             <p class="text-gray-600">
-                                2 hours
+                                {{ $event->duration }}
                             </p>
                         </div>
                         <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 py-4 border-b">
@@ -64,16 +64,25 @@
                                 Category
                             </p>
                             <p class="text-gray-600">
-                                Category type
+                                {{ $event->category->name }}
                             </p>
                         </div>
-
+                        {{-- <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 py-4 border-b">
+                            <p >
+                                Tags
+                            </p>
+                            @foreach ($event->categories as $category)
+                                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium">
+                                    {{ $category->name }}
+                                </span>
+                            @endforeach
+                        </div> --}}
                         <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 py-4 ">
                             <p>
-                                About
+                                Description
                             </p>
                             <p class="text-gray-600">
-                                Fugiat ipsum ipsum deserunt culpa aute sint do nostrud anim incididunt cillum culpa consequat. Excepteur qui ipsum aliquip consequat sint.
+                                {{ $event->about }}
                             </p>
                         </div>
                     </div>
@@ -92,7 +101,7 @@
                                 Venue Name
                             </p>
                             <p class="text-gray-600">
-                                Hilton Colombo
+                                {{ $event->venue_name }}
                             </p>
                         </div>
                         <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 py-4 border-b">
@@ -100,7 +109,7 @@
                                 Address
                             </p>
                             <p class="text-gray-600">
-                                2 Sir Chittampalam A Gardiner Mawatha
+                                {{ $event->address }}
                             </p>
                         </div>
                         <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 py-4 border-b">
@@ -108,7 +117,7 @@
                                 City
                             </p>
                             <p class="text-gray-600">
-                                Colombo 02
+                                {{ $event->city }}
                             </p>
                         </div>
                         {{-- <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 py-4 ">
@@ -132,7 +141,7 @@
                                     Price Per Ticket
                                 </p>
                                 <p class="text-gray-600">
-                                    Rs. 5000.00
+                                    Rs. {{ $event->price }}
                                 </p>
                             </div>
                         <div class="grid py-4 relative">
