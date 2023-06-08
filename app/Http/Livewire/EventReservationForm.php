@@ -17,6 +17,7 @@ class EventReservationForm extends Component
     {
         $this->event = $event;
         $this->user = auth()->user();
+        $this->reservation = new Reservation();
     }
 
     public function render()
