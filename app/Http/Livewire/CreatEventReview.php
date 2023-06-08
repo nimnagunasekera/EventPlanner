@@ -28,6 +28,10 @@ class CreatEventReview extends Component
 
     public function save()
     {
+        if (!auth()->check()) {
+            return redirect()->route('login');
+        }
+
         $this->validate();
 
         $this->event->reviews()->create([
