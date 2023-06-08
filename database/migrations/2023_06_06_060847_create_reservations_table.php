@@ -23,7 +23,7 @@ return new class extends Migration
             $table->string('email');
             $table->string('phone');
 
-            $table->string('address');
+            $table->text('address');
             $table->string('city');
             $table->string('province');
             $table->string('postal_code');
