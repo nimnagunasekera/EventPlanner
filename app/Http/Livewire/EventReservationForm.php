@@ -13,6 +13,18 @@ class EventReservationForm extends Component
 
     public Reservation $reservation;
 
+    protected $rules = [
+        'reservation.first_name' => 'required',
+        'reservation.last_name' => 'required',
+        'reservation.email' => 'required|email',
+        'reservation.phone' => 'required',
+        'reservation.address' => 'required',
+        'reservation.city' => 'required',
+        'reservation.province' => 'required',
+        'reservation.postal_code' => 'required',
+        'reservation.card_number' => 'required',
+    ];
+
     public function mount($event)
     {
         $this->event = $event;
