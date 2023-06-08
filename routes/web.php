@@ -33,7 +33,9 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 
-    Route::resource('/event', AdminEventController::class);
+    Route::resource('/event', AdminEventController::class)->only([
+        'index', 'create', 'edit'
+    ]);
 
     Route::get('/category', function () {
         return view('admin.category.index');
