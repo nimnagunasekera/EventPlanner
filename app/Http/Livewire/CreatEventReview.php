@@ -8,6 +8,12 @@ class CreatEventReview extends Component
 {
     public $event;
 
+    public $rating = 3;
+
+    public $title;
+
+    public $comment;
+
     public function mount($event)
     {
         $this->event = $event;
