@@ -50,19 +50,14 @@ Route::middleware([
     })->name('user.index');
 });
 
-Route::get('event/{id}', function ($id) {
-    return view('event.show', [
-        'event' => $id
-    ]);
-})
-// ->where('id', '[0-9]+')
+Route::get('events', [EventController::class, 'index'])
+    ->name('event.index');
+
+Route::get('event/{id}', [EventController::class, 'show'])
 ->name('event.show');
 
-Route::get('reserve/{id}', function ($id) {
-    return view('event.reservation', [
-        'reserve' => $id
-    ]);
-})->name('event.reservation');
+Route::get('reserve/{id}', [EventController::class, 'reservation'])
+->name('event.reservation');
 
 //As a rule, keep the home route at the bottom of the file.
 Route::get('/', HomeController::class)->name('home');
