@@ -10,8 +10,12 @@ class AdminReservationController extends Controller
 {
     public function index()
     {
-        $reservations = Reservation::all();
 
-        return view('admin.reservation.index');
+        $reservations = Reservation::orderBy('created_at', 'desc')->paginate(10);
+
+
+
+        return view('admin.reservation.index', [
+            'reservations' => $reservations]);
     }
 }
