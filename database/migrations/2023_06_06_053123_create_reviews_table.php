@@ -20,7 +20,7 @@ return new class extends Migration
 
             $table->foreignId('user_id');
 
-            $table->integer('rating');
+            $table->smallInteger('rating')->default(1);
 
             $table->string('title')->nullable();
 
