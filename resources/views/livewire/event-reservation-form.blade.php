@@ -12,7 +12,9 @@
                         <label for="first-name" class="block text-sm font-medium leading-6 text-gray-900">First
                             name</label>
                         <div class="mt-2">
-                            <input type="text" name="first-name" id="first-name" autocomplete="given-name"
+                            <input type="text"
+                                wire:model="reservation.first_name"
+                                name="first-name" id="first-name" autocomplete="given-name"
                                 class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                         </div>
                     </div>
@@ -21,7 +23,9 @@
                         <label for="last-name" class="block text-sm font-medium leading-6 text-gray-900">Last
                             name</label>
                         <div class="mt-2">
-                            <input type="text" name="last-name" id="last-name" autocomplete="family-name"
+                            <input type="text"
+                                wire:model="reservation.last_name"
+                                name="last-name" id="last-name" autocomplete="family-name"
                                 class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                         </div>
                     </div>
@@ -30,7 +34,9 @@
                         <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Email
                             address</label>
                         <div class="mt-2">
-                            <input id="email" name="email" type="email" autocomplete="email"
+                            <input id="email"
+                                wire:model="reservation.email"
+                                name="email" type="email" autocomplete="email"
                                 class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                         </div>
                     </div>
@@ -40,7 +46,9 @@
                             Phone
                         </label>
                         <div class="mt-2">
-                            <input id="phone" name="phone" type="text" autocomplete="phone"
+                            <input id="phone"
+                                wire:model="reservation.phone"
+                                name="phone" type="text" autocomplete="phone"
                                 class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                         </div>
                     </div>
@@ -49,7 +57,9 @@
                         <label for="address"
                             class="block text-sm font-medium leading-6 text-gray-900">Address</label>
                         <div class="mt-2">
-                            <input type="text" name="address" id="address"
+                            <input type="text"
+                                wire:model="reservation.address"
+                                name="address" id="address"
                                 autocomplete="address"
                                 class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                         </div>
@@ -59,17 +69,21 @@
                         <label for="city"
                             class="block text-sm font-medium leading-6 text-gray-900">City</label>
                         <div class="mt-2">
-                            <input type="text" name="city" id="city" autocomplete="address-level2"
+                            <input type="text"
+                                wire:model="reservation.city"
+                                name="city" id="city" autocomplete="address-level2"
                                 class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                         </div>
                     </div>
 
                     <div class="sm:col-span-2">
-                        <label for="region" class="block text-sm font-medium leading-6 text-gray-900">
+                        <label for="province" class="block text-sm font-medium leading-6 text-gray-900">
                             Province
                         </label>
                         <div class="mt-2">
-                            <input type="text" name="region" id="region" autocomplete="address-level1"
+                            <input type="text"
+                                wire:model="reservation.province"
+                                name="province" id="province" autocomplete="address-level1"
                                 class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                         </div>
                     </div>
@@ -77,7 +91,9 @@
                     <div class="sm:col-span-2">
                         <label for="postal_code" class="block text-sm font-medium leading-6 text-gray-900">Postal code</label>
                         <div class="mt-2">
-                            <input type="text" name="postal_code" id="postal_code" autocomplete="postal_code"
+                            <input type="text"
+                                wire:model="reservation.postal_code"
+                                name="postal_code" id="postal_code" autocomplete="postal_code"
                                 class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                         </div>
                     </div>
@@ -90,10 +106,12 @@
 
                 <div class="mt-5 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
                     <div class="sm:col-span-3">
-                        <label for="first-name" class="block text-sm font-medium leading-6 text-gray-900">Card
+                        <label for="card_number" class="block text-sm font-medium leading-6 text-gray-900">Card
                             Number</label>
                         <div class="mt-2">
-                            <input type="text" name="first-name" id="first-name" autocomplete="given-name"
+                            <input type="text"
+                                wire:model="reservation.card_number"
+                                name="card_number" id="card_number" autocomplete="card_number"
                                 class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                         </div>
                     </div>
