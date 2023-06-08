@@ -167,9 +167,17 @@
                     @livewire('event-reviews', [
                         'event' => $event
                     ])
+                    @auth
                     @livewire('creat-event-review', [
                         'event' => $event
                     ])
+                    @endauth
+                    @guest
+                    <div class="mt-6 mb-5">
+                        <a href="{{ route('login') }}" class="rounded-md bg-indigo-600 px-4 py-2 text-lg font-medium text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 place-self-center">
+                            Login to Leave a Review
+                        </a>
+                    @endguest
                 </div>
             </div>
         </div>
