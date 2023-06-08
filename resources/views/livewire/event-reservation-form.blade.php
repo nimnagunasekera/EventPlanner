@@ -16,7 +16,10 @@
                                 wire:model="reservation.first_name"
                                 name="first-name" id="first-name" autocomplete="given-name"
                                 class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-                        </div>
+                            @error('reservation.first_name')
+                                <span class="mt-2 text-red-600 text-sm">{{ $message }}</span>
+                            @enderror
+                            </div>
                     </div>
 
                     <div class="sm:col-span-3">
@@ -27,6 +30,9 @@
                                 wire:model="reservation.last_name"
                                 name="last-name" id="last-name" autocomplete="family-name"
                                 class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                            @error('reservation.last_name')
+                                <span class="mt-2 text-red-600 text-sm">{{ $message }}</span>
+                            @enderror
                         </div>
                     </div>
 
@@ -38,6 +44,9 @@
                                 wire:model="reservation.email"
                                 name="email" type="email" autocomplete="email"
                                 class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                            @error('reservation.email')
+                                <span class="mt-2 text-red-600 text-sm">{{ $message }}</span>
+                            @enderror
                         </div>
                     </div>
 
@@ -50,6 +59,9 @@
                                 wire:model="reservation.phone"
                                 name="phone" type="text" autocomplete="phone"
                                 class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                @error('reservation.phone')
+                                <span class="mt-2 text-red-600 text-sm">{{ $message }}</span>
+                                 @enderror
                         </div>
                     </div>
 
@@ -62,6 +74,9 @@
                                 name="address" id="address"
                                 autocomplete="address"
                                 class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                @error('reservation.address')
+                                <span class="mt-2 text-red-600 text-sm">{{ $message }}</span>
+                                @enderror
                         </div>
                     </div>
 
@@ -73,6 +88,9 @@
                                 wire:model="reservation.city"
                                 name="city" id="city" autocomplete="address-level2"
                                 class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                            @error('reservation.city')
+                                <span class="mt-2 text-red-600 text-sm">{{ $message }}</span>
+                            @enderror
                         </div>
                     </div>
 
@@ -85,6 +103,9 @@
                                 wire:model="reservation.province"
                                 name="province" id="province" autocomplete="address-level1"
                                 class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                            @error('reservation.province')
+                                <span class="mt-2 text-red-600 text-sm">{{ $message }}</span>
+                            @enderror
                         </div>
                     </div>
 
@@ -95,6 +116,9 @@
                                 wire:model="reservation.postal_code"
                                 name="postal_code" id="postal_code" autocomplete="postal_code"
                                 class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                            @error('reservation.postal_code')
+                                <span class="mt-2 text-red-600 text-sm">{{ $message }}</span>
+                            @enderror
                         </div>
                     </div>
                 </div>
@@ -113,6 +137,9 @@
                                 wire:model="reservation.card_number"
                                 name="card_number" id="card_number" autocomplete="card_number"
                                 class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                            @error('reservation.card_number')
+                                <span class="mt-2 text-red-600 text-sm">{{ $message }}</span>
+                            @enderror
                         </div>
                     </div>
                 </div>
