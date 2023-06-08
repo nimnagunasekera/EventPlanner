@@ -46,6 +46,12 @@ class EventReservationForm extends Component
         //show success message
         session()->flash('message', 'Registered to the event successfully!');
 
+        //get the current active user
+        $user = auth()->user();
+
+        //notify the user
+        $user->notify((new \App\Notifications\ReservationComplete($this->reservation)));
+
         //redirect user to the event page
         return redirect()->route('event.show', $this->event->id);
     }

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\ReservationController as ReservationController;
 use App\Http\Controllers\EventController as EventController;
 use App\Http\Controllers\Admin\EventController as AdminEventController;
 use App\Http\Controllers\HomeController as HomeController;
@@ -19,6 +20,12 @@ use App\Http\Controllers\Admin\AdminReservationController as AdminReservationCon
 */
 
 //As a convention, always keep all the authentication routes at the top of the file.
+
+Route::get('/dev', function () {
+    $user = auth()->user();
+
+    return true;
+});
 
 Route::middleware([
     'auth:sanctum',
