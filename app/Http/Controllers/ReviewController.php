@@ -8,6 +8,10 @@ class ReviewController extends Controller
 {
     use HasFactory;
 
+    protected $attributes = [
+        'rating' => 1
+    ];
+
     protected $fillable = [
         'event_id',
         'user_id',
