@@ -45,7 +45,7 @@
                                 <x-td>{{ $event->price }}</x-td>
                                 <x-td class="justify-center">
                                     <a href="{{ route('admin.event.edit', $event->id) }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold mr-1 py-2 px-4 rounded">Edit</a>
-                                    <form class="inline-block" action="{{ route('admin.event.destroy', $event) }}" method="POST" onsubmit="return confirm('Are you sure?');">
+                                    <form class="inline-block" action="{{ route('admin.event.destroy', $event) }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this event?')">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="bg-red-500 hover:bg-red-700 text-white font-bold ml-1 py-2 px-4 rounded">Delete</button>
