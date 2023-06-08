@@ -2,6 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\EventController as EventController;
+use App\Http\Controllers\Admin\EventController as AdminEventController;
+use App\Http\Controllers\HomeController as HomeController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,27 +26,26 @@ Route::middleware([
     'role:admin'
 ])
 ->prefix('admin')
+->name('admin.')
 ->group(function () {
 
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
 
-    Route::get('/event', function () {
-        return view('admin.event.index');
-    })->name('admin.event.index');
-
-    Route::get('/reservation', function () {
-        return view('admin.reservation.index');
-    })->name('admin.reservation.index');
+    Route::resource('/event', AdminEventController::class);
 
     Route::get('/category', function () {
         return view('admin.category.index');
-    })->name('admin.category.index');
+    })->name('category.index');
+
+    Route::get('/reservation', function () {
+        return view('admin.reservation.index');
+    })->name('reservation.index');
 
     Route::get('/user', function () {
         return view('admin.user.index');
-    })->name('admin.user.index');
+    })->name('user.index');
 });
 
 Route::get('event/{id}', function ($id) {
@@ -60,7 +63,4 @@ Route::get('reserve/{id}', function ($id) {
 })->name('event.reservation');
 
 //As a rule, keep the home route at the bottom of the file.
-Route::get('/', function () {
-    return view('home');
-})
-->name('home');
+Route::get('/', HomeController::class)->name('home');

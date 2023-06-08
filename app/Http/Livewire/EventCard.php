@@ -6,6 +6,13 @@ use Livewire\Component;
 
 class EventCard extends Component
 {
+    public $event;
+
+    public function mount($event)
+    {
+        $this->event = $event;
+    }
+
     public function render()
     {
         return view('livewire.event-card');

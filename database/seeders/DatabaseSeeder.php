@@ -26,5 +26,10 @@ class DatabaseSeeder extends Seeder
             'role' => \App\Enums\UserRole::Admin->value,
         ]);
 
+        $this->call([
+            CategorySeeder::class,
+            EventSeeder::class,
+        ]);
+
     }
 }
