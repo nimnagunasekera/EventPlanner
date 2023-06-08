@@ -16,5 +16,17 @@ class ReviewController extends Controller
         'comment',
     ];
 
+    protected $casts = [
+        'rating' => 'integer',
+    ];
 
+    public function event()
+    {
+        return $this->belongsTo(Event::class);
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }
