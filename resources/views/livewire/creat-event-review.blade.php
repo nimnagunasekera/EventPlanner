@@ -1,6 +1,8 @@
 <div class="pt-5">
-    <h3 class="text-lg font-medium leading-7 text-gray-900">Post A Review</h3>
-    <form action="#" class="relative bg-white pt-4">
+    <h3 class="text-lg font-medium leading-7 text-gray-900">
+        Post A Review
+    </h3>
+    <form wire:submit.prevent="save" class="relative bg-white pt-4">
 
         <select name="rating" id="rating" wire:model="rating" class="mb-3 rounded border-gray-300">
             <option value="" selected disabled>Rating</option>

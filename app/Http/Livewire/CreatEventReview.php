@@ -26,6 +26,22 @@ class CreatEventReview extends Component
         $this->event = $event;
     }
 
+    public function save()
+    {
+        $this->validate();
+
+        $this->event->reviews()->create([
+            'user_id' => auth()->id(),
+            'rating' => $this->rating,
+            'title' => $this->title,
+            'comment' => $this->comment,
+        ]);
+
+        $this->emit('reviewAdded');
+
+        $this->reset(['rating', 'title', 'comment']);
+    }
+
     public function render()
     {
         return view('livewire.creat-event-review');
