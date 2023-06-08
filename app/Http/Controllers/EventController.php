@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Event;
 
 class EventController extends Controller
 {
@@ -11,10 +12,10 @@ class EventController extends Controller
         return view('event.index');
     }
 
-    public function show($id)
+    public function show(Event $event)
     {
         return view('event.show', [
-            'event' => $id
+            'event' => $event
         ]);
     }
 
