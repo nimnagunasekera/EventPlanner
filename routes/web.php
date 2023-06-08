@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EventController as EventController;
 use App\Http\Controllers\Admin\EventController as AdminEventController;
 use App\Http\Controllers\HomeController as HomeController;
+use App\Http\Controllers\Admin\AdminReservationController as AdminReservationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,9 +42,7 @@ Route::middleware([
         return view('admin.category.index');
     })->name('category.index');
 
-    Route::get('/reservation', function () {
-        return view('admin.reservation.index');
-    })->name('reservation.index');
+    Route::get('/reservation', [AdminReservationController::class, 'index'])->name('reservation.index');
 
     Route::get('/user', function () {
         return view('admin.user.index');
