@@ -19,10 +19,10 @@ class EventController extends Controller
         ]);
     }
 
-    public function reservation($id)
+    public function reservation(Event $event)
     {
         return view('event.reservation', [
-            'reserve' => $id
+            'event' => $event
         ]);
     }
 }
