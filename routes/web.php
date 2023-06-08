@@ -57,6 +57,7 @@ Route::get('event/{event}', [EventController::class, 'show'])
 ->name('event.show');
 
 Route::get('reserve/{event}', [EventController::class, 'reservation'])
+->middleware(['auth:sanctum', config('jetstream.auth_session')])
 ->name('event.reservation');
 
 //As a rule, keep the home route at the bottom of the file.
