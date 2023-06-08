@@ -32,6 +32,21 @@ class EventReservationForm extends Component
         $this->reservation = new Reservation();
     }
 
+    public function createReservation(){
+        $this->validate();
+
+        $this->reservation->user_id = $this->user->id;
+
+        $this->reservation->event_id = $this->event->id;
+
+        $this->reservation->save();
+
+        $this->emit('reservationCreated');
+
+        //redirect user to the event page
+        return redirect()->route('event.show', $this->event->id);
+    }
+
     public function render()
     {
         return view('livewire.event-reservation-form');
