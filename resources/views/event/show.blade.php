@@ -56,15 +56,29 @@
                 <!-- This is an example component -->
             <div class="bg-white">
                 <div >
-                    <div class="p-4">
-                        <h2 class="text-2xl ">
-                            View Count <p class="text-gray-600">
-                                {{ $event->view_count }}
+                    <div>
+                        <div class="p-4 ">
+                            <h2 class="text-2xl ">
+                                Event Analytics
+                            </h2>
+                        </div>
+                        <div class="pb-4 px-4">
+                            <p class="text-gray-600">
+                                Total Views : {{ $event->view_count }}
                             </p>
-                        </h2>
+                        </div>
+                        <div class="px-4 pb-4 border-b">
+                            <p class="text-gray-600">
+                                Total Registrations : {{ $event->subscription_count }}
+                            </p>
+                        </div>
+
                     </div>
 
-                    <div class="p-4 ">
+
+
+
+                    <div class="p-4">
                         <h2 class="text-2xl ">
                             Event Details
                         </h2>

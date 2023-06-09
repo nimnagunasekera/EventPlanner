@@ -43,6 +43,9 @@ class EventReservationForm extends Component
 
         $this->emit('reservationCreated');
 
+        // Increment subscription count
+        $this->event->increment('subscription_count');
+
         //show success message
         session()->flash('message', 'Registered to the event successfully!');
 
