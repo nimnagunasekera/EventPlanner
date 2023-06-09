@@ -56,6 +56,14 @@
                 <!-- This is an example component -->
             <div class="bg-white">
                 <div >
+                    <div class="p-4">
+                        <h2 class="text-2xl ">
+                            View Count: <p class="text-gray-600">
+                                {{ $event->view_count }}
+                            </p>
+                        </h2>
+                    </div>
+
                     <div class="p-4 ">
                         <h2 class="text-2xl ">
                             Event Details

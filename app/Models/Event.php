@@ -25,6 +25,8 @@ class Event extends Model implements HasMedia
         'city',
         'price',
         'image',
+        'view_count',
+        'subscription_count',
     ];
 
     //Added this relationship to get the category in the event table

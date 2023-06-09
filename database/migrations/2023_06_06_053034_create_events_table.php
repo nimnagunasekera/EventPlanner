@@ -33,6 +33,9 @@ return new class extends Migration
 
             $table->string('image')->nullable();
 
+            $table->unsignedInteger('view_count')->default(0);
+            $table->unsignedInteger('subscription_count')->default(0);
+
             $table->timestamps();
         });
     }
