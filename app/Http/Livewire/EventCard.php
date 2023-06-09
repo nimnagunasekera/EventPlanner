@@ -19,4 +19,5 @@ class EventCard extends Component
     {
         return view('livewire.event-card');
     }
+
 }
