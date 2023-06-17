@@ -15,15 +15,16 @@ class ValidateRole
      */
     public function handle(Request $request, Closure $next, string $type): Response
     {
-        //validate the type to see if this exixts as a role in the UserRole enum
-        //if not, throw an exception
-
+        //create an empty array to store the roles
         $roles = [];
 
+        //get all the roles from the UserRole enum
         foreach (\App\Enums\UserRole::cases() as $role) {
             $roles[] = strtolower($role->name);
         }
 
+        //validate the type to see if this exixts as a role in the UserRole enum
+        //if not, throw an exception
         if (!in_array(strtolower($type), $roles)) {
             throw new \Exception('Invalid role type');
         }
@@ -36,6 +37,7 @@ class ValidateRole
 
         // check if the user has the role
         if (strtolower($request->user()->role->name) === $type) {
+            // if yes, allow the request
             return $next($request);
         } else {
             // if not, throw an exception 403
