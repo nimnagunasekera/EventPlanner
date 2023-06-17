@@ -28,11 +28,19 @@
                                 <x-td>{{ $category->description }}</x-td>
                                 <x-td class="justify-center">
                                     <a href="{{ route('admin.category.edit', $category->id) }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold mr-1 py-2 px-4 rounded">Edit</a>
+                                    @if ($category->events()->exists())
+                                    <form class="inline-block" action="{{ route('admin.category.destroy', $category) }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this event?')">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="bg-red-500 text-white font-bold ml-1 py-2 px-4 rounded cursor-not-allowed opacity-50" disabled>Delete</button>
+                                    </form>
+                                    @else
                                     <form class="inline-block" action="{{ route('admin.category.destroy', $category) }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this event?')">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="bg-red-500 hover:bg-red-700 text-white font-bold ml-1 py-2 px-4 rounded">Delete</button>
                                     </form>
+                                    @endif
                                 </x-td>
                             </x-tr>
                         @endforeach

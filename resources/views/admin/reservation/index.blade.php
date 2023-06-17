@@ -25,7 +25,11 @@
 
                     @foreach ($reservations as $reservation)
                         <x-tr>
-                            <x-td class=" py-4 px-6 text-sm text-gray-600 w-[300px] text-left">{{ $reservation->event->event_name }}</x-td>
+                            <x-td class=" py-4 px-6 text-sm text-gray-600 w-[300px] text-left">
+                                <a href="{{ route('event.show', $reservation->event->id) }}">
+                                {{ $reservation->event->event_name }}
+                                </a>
+                            </x-td>
                             <x-td class=" py-4 px-6 text-sm text-gray-600 border w-[300px] text-left">{{ $reservation->first_name }}</x-td>
                             <x-td class=" py-4 px-6 text-sm text-gray-600 border w-[300px] text-left">{{ $reservation->last_name }}</x-td>
                             <x-td class=" py-4 px-6 text-sm text-gray-600 border w-[300px] text-left">{{ $reservation->email }}</x-td>

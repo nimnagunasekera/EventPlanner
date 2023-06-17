@@ -125,7 +125,7 @@ class EventSeeder extends Seeder
             ),
             array(
                 'event_name' => 'Conference on Science',
-                'date' => '2023-09-15',
+                'date' => '2023-06-15',
                 'time' => '9:00 AM',
                 'duration' => '6 hours',
                 'about' => 'Explore the frontiers of science and listen to expert speakers discussing breakthrough discoveries and research.',
@@ -136,7 +136,7 @@ class EventSeeder extends Seeder
             ),
             array(
                 'event_name' => 'Comedy Show',
-                'date' => '2023-09-20',
+                'date' => '2023-05-20',
                 'time' => '8:30 PM',
                 'duration' => '2 hours',
                 'about' => 'Laugh out loud at our comedy show featuring hilarious stand-up performances by popular comedians.',

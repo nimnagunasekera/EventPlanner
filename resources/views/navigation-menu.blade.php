@@ -142,6 +142,9 @@
                                 {{ __('My Events') }}
                                 </x-dropdown-link>
 
+                                <x-dropdown-link href="{{ route('past-events') }}">
+                                    {{ __('Past Events') }}
+                                </x-dropdown-link>
 
                             <!-- Account Management -->
                             <div class="block px-4 py-2 text-xs text-gray-400">

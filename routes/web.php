@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ReservationController as ReservationController;
 use App\Http\Controllers\EventController as EventController;
 use App\Http\Controllers\Admin\EventController as AdminEventController;
-use App\Http\Controllers\HomeController as HomeController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Admin\AdminReservationController as AdminReservationController;
 use App\Http\Controllers\Admin\UserController as AdminUserController;
 use App\Http\Controllers\Admin\CategoryController as AdminCategoryController;
@@ -23,7 +23,6 @@ use App\Http\Controllers\MyEventsController as MyEventsController;
 */
 
 //As a convention, always keep all the authentication routes at the top of the file.
-
 Route::get('/dev', function () {
     $user = auth()->user();
 
@@ -68,6 +67,8 @@ Route::get('reserve/{event}', [EventController::class, 'reservation'])
 ->name('event.reservation');
 
 Route::get('/myevents', MyEventsController::class)->name('myevents');
+
+Route::get('/past-events', [HomeController::class, 'pastEvents'])->name('past-events');
 
 //As a rule, keep the home route at the bottom of the file.
 Route::get('/', HomeController::class)->name('home');

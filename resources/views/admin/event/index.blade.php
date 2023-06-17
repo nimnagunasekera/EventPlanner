@@ -27,7 +27,11 @@
                     <x-slot name="body">
                         @foreach ($events as $event)
                             <x-tr>
-                                <x-td>{{ $event->event_name }}</x-td>
+                                <x-td>
+                                    <a href="{{ route('event.show', $event->id) }}">
+                                        {{ $event->event_name }}
+                                    </a>
+                                </x-td>
                                 <x-td>
                                     @if ($event->hasMedia('image'))
                                     <img src="{{ $event->getFirstMediaUrl('image') }}" alt="{{ $event->name }}">
